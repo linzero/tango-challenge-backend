@@ -9,7 +9,7 @@ export const solveFibonacci = (req:Request, res:Response) => {
     if (number !== NaN) {
 
         // Calculate fibonacci
-        let num1 = 0, num2 = 1, calc = 0;
+        let num1 = 0, num2 = 1, calc = (number === 0) ? 0 : 1;
 
         for (let i = 1; i < number; i++) {
             calc = num1 + num2;

@@ -1,4 +1,6 @@
 import express from "express";
+import cors from 'cors'
+
 
 /* Class to handle express server  */
 export default class Server  {
@@ -11,6 +13,19 @@ export default class Server  {
         // Init variables
         this.port = port
         this.app = express()
+        // CORS Fixed
+        var whitelist = ['http://localhost:3000', 'http://localhost']
+        var corsOptions = {
+        origin: function (origin:any, callback:any) {
+            if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true)
+            } else {
+            callback(new Error('Not allowed by CORS'))
+            }
+        }
+        }
+        this.app.use(cors(corsOptions));
+    
     }
 
     // Function to init class
