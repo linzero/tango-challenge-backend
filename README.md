@@ -8,9 +8,9 @@
 
 ## Instructions
 - From shell Clone the proyect
-``` git clone https://github.com/linzero/tango-challege-front.git ```
+``` git clone https://github.com/linzero/tango-challenge-backend.git ```
 - Enter to downloaded folder
-``` cd tango-challege-front  ```
+``` cd tango-challenge-backend  ```
 - Install modules
 ```npm i```
 - Start Proyect
